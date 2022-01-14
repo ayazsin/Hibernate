@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- classe java+nom de table+les propriétés (id est un champ automatique 
+		primary key) -->
+	<class name="project01_Refactorisation.bean.Employee" table="myEmployee">
+		<id name="id">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="firstName"></property>
+		<property name="lastName"></property>
+	</class>
+</hibernate-mapping> 
+

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+  	<!-- config Hibernate -->
+<hibernate-configuration>  
+    <session-factory>
+		<property name="hbm2ddl.auto">create</property> <!-- mode create -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQL5Dialect
+		</property>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/EMPLOYEE
+		</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root1234</property>
+		<property name="show_sql">true</property> <!--  mode debug -->
+		<property name="format_sql">true</property>
+
+		<!-- List of XML mapping files -->
+		<mapping resource="employee.hbm.xml" />
+<!--		&lt;!&ndash;  entités métier à gérer! &ndash;&gt;-->
+<!--		<mapping class="project02_JPA.bean.Student" />-->
+<!--		<mapping class="project02_JPA.bean.Address" />-->
+<!--		&lt;!&ndash;  project03 &ndash;&gt;-->
+<!--		<mapping class="project03_oneToMany.model.Answer"/>-->
+<!--		<mapping class="project03_oneToMany.model.Question"/>-->
+<!--		&lt;!&ndash;  project04 &ndash;&gt;-->
+<!--		<mapping class="project04_manyToMany.model.Player"/>-->
+<!--		<mapping class="project04_manyToMany.model.Sponsor"/>-->
+
+
+		
+	</session-factory>
+</hibernate-configuration>  
